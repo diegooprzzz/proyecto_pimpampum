@@ -1,0 +1,154 @@
+Aquí adjunto el código de mi proyecto.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto SMR - Diego Pérez Alonso</title>
+    <style>
+        :root {
+            --azul: #0077b6;
+            --fondo: #f4f7f9;
+            --texto: #334155;
+            /* Colores para el Gantt */
+            --c1: #3498db; --c2: #2ecc71; --c3: #9b59b6; 
+            --c4: #f1c40f; --c5: #e67e22; --c6: #e74c3c;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: var(--fondo); 
+            color: var(--texto); 
+            margin: 0; padding: 0; 
+            line-height: 1.6;
+        }
+        
+        header { 
+            background: white; 
+            padding: 50px 20px; 
+            text-align: center; 
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        h1 { margin: 0; color: var(--azul); font-size: 2.2em; }
+        .subtitulo { color: #64748b; font-size: 1.1em; margin-top: 5px; }
+
+        /* Contenedor más ancho para que no se vea estrecho */
+        .container { 
+            width: 95%; 
+            max-width: 1100px; 
+            margin: 40px auto; 
+        }
+        
+        .tarjeta { 
+            background: white; 
+            padding: 35px; 
+            margin-bottom: 25px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 { 
+            color: var(--azul); 
+            font-size: 1.4em; 
+            border-left: 5px solid var(--azul); 
+            padding-left: 15px; 
+            margin-top: 0;
+        }
+
+        p { font-size: 1.05em; color: #4a5568; }
+
+        .foto-proyecto { 
+            max-width: 90%; 
+            height: auto; 
+            border-radius: 8px; 
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+        }
+
+        /* Tabla de tiempo mejorada */
+        .tabla-scroll { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background: #f8fafc; padding: 12px; font-size: 0.9em; border-bottom: 2px solid #edf2f7; }
+        td { padding: 15px; text-align: center; border-bottom: 1px solid #edf2f7; }
+        
+        .fase-nombre { text-align: left; font-weight: 600; width: 220px; }
+        
+        /* Marcas de colores distintos para el Gantt */
+        .barra { height: 10px; border-radius: 5px; width: 80%; margin: 0 auto; display: block; }
+        .b1 { background: var(--c1); }
+        .b2 { background: var(--c2); }
+        .b3 { background: var(--c3); }
+        .b4 { background: var(--c4); }
+        .b5 { background: var(--c5); }
+        .b6 { background: var(--c6); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Proyecto Final 1º SMR</h1>
+        <div class="subtitulo">Diego Pérez Alonso</div>
+    </header>
+
+    <div class="container">
+
+        <section class="tarjeta">
+            <h2>1. Aplicaciones Web</h2>
+            <p>En este apartado muestro una de las prácticas que hemos realizado durante el curso. He aprendido a usar HTML para estructurar la información y CSS para darle un aspecto limpio. Me ha servido para entender cómo funcionan los sitios web por dentro y cómo organizar los archivos en el servidor.</p>
+            <img src="./images/Captura de pantalla 2026-05-14 125512.png" alt="Práctica Web" class="foto-proyecto">
+        </section>
+
+        <section class="tarjeta">
+            <h2>2. Montaje y Mantenimiento</h2>
+            <p>Durante las horas de taller hemos practicado el montaje completo de equipos. Desde la elección del procesador y la placa hasta la gestión del cableado interno para mejorar la ventilación. También hemos visto cómo aplicar correctamente la pasta térmica y realizar el mantenimiento preventivo del hardware.</p>
+            <img src="./images/Captura de pantalla 2026-05-14 131008.png" alt="Montaje de PC" class="foto-proyecto">
+        </section>
+
+        <section class="tarjeta">
+            <h2>3. Redes de Área Local</h2>
+            <p>He aprendido a configurar redes locales, crimpar cables RJ45 y trabajar con switches. En las prácticas hemos comprobado la conectividad entre equipos mediante comandos de red y hemos visto cómo se distribuye la señal en una red de aula para que todos los puestos tengan acceso.</p>
+            <img src="./images/Captura de pantalla 2026-05-14 133631.png" alt="Redes Locales" class="foto-proyecto">
+        </section>
+
+        <section class="tarjeta">
+            <h2>4. Sistemas Operativos</h2>
+            <p>He utilizado máquinas virtuales para instalar sistemas Windows y Linux. Esto me ha permitido practicar la creación de particiones, la gestión de usuarios y el manejo de permisos de archivos sin riesgo para el equipo principal. Es fundamental para entender cómo se organiza un sistema desde cero.</p>
+            <img src="./images/Captura de pantalla 2026-05-14 134115.png" alt="Sistemas Operativos" class="foto-proyecto">
+        </section>
+
+        <section class="tarjeta">
+            <h2>5. Itinerario Personal para la Empleabilidad (IPE)</h2>
+            <p>En IPE nos hemos centrado en la salud laboral. He aprendido a configurar mi espacio de trabajo de forma ergonómica para evitar lesiones, cuidando la altura del monitor y la posición de la silla, algo esencial cuando pasamos muchas horas frente al ordenador.</p>
+        </section>
+
+        <section class="tarjeta">
+            <h2>6. Sostenibilidad (SASP)</h2>
+            <p>En este módulo hemos visto la importancia del reciclaje de los componentes electrónicos. Como técnicos, debemos saber dónde depositar las piezas viejas o dañadas para que reciban el tratamiento adecuado y reducir así el impacto ambiental de nuestra actividad.</p>
+        </section>
+
+        <section class="tarjeta">
+            <h2>7. Planificación del Proyecto</h2>
+            <p>Resumen visual de las tareas realizadas durante las últimas semanas:</p>
+            
+            <div class="tabla-scroll">
+                <table>
+                    <tr>
+                        <th>Actividad</th>
+                        <th>Sem 1</th><th>Sem 2</th><th>Sem 3</th><th>Sem 4</th><th>Sem 5</th><th>Sem 6</th>
+                    </tr>
+                    <tr><td class="fase-nombre">Revisión de contenidos</td><td><span class="barra b1"></span></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="fase-nombre">Estructura del sitio</td><td></td><td><span class="barra b2"></span></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="fase-nombre">Diseño y CSS</td><td></td><td></td><td><span class="barra b3"></span></td><td></td><td></td><td></td></tr>
+                    <tr><td class="fase-nombre">Capturas de pantalla</td><td></td><td></td><td></td><td><span class="barra b4"></span></td><td></td><td></td></tr>
+                    <tr><td class="fase-nombre">Redacción de textos</td><td></td><td></td><td></td><td></td><td><span class="barra b5"></span></td><td></td></tr>
+                    <tr><td class="fase-nombre">Subida a GitHub</td><td></td><td></td><td></td><td></td><td></td><td><span class="barra b6"></span></td></tr>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
